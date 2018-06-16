@@ -42,3 +42,12 @@ statuses = twitter_api.GetUserTimeline(screen_name=handle, count=200, include_rt
 for status in statuses:
   print status.text
 ```
+
+```py
+text = ""
+
+for status in statuses:
+  if (status.lang =='en'): # English tweets
+    text += status.text.encode('utf-8')
+  print text
+```
