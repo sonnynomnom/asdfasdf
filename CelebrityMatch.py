@@ -10,26 +10,26 @@ def analyze(handle):
     # Twitter
   	
     twitter_consumer_key = ''
-	  twitter_consumer_secret = ''
-	  twitter_access_token = ''
-	  twitter_access_secret = ''
+    twitter_consumer_secret = ''
+    twitter_access_token = ''
+    twitter_access_secret = ''
 
-	  twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
+    twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
                     consumer_secret=twitter_consumer_secret,
                     access_token_key=twitter_access_token,
                     access_token_secret=twitter_access_secret)
 
-  	statuses = twitter_api.GetUserTimeline(screen_name=handle, count=200, include_rts=False)
+    statuses = twitter_api.GetUserTimeline(screen_name=handle, count=200, include_rts=False)
 
-  	text = ""
+    text = ""
   
-  	for s in statuses:
-	      if (s.lang =='en'):
+    for s in statuses:
+        if (s.lang =='en'):
             text += s.text.encode('utf-8')
 
     # IBM username
   
-	  pi_username = ''
+    pi_username = ''
     pi_password = ''
 
     personality_insights = PersonalityInsights(username=pi_username, password=pi_password)
