@@ -7,7 +7,7 @@ from watson_developer_cloud import PersonalityInsightsV2 as PersonalityInsights
 
 def analyze(handle):
 
-    # Twitter
+    # Twitter credentials
   	
     twitter_consumer_key = ''
     twitter_consumer_secret = ''
