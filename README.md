@@ -51,3 +51,11 @@ for status in statuses:
     text += status.text.encode('utf-8')
   print text
 ```
+
+```py
+# The IBM Bluemix credentials for Personality Insights!
+pi_username = ''
+pi_password = ''
+
+personality_insights = PersonalityInsights(username=pi_username, password=pi_password)
+```
